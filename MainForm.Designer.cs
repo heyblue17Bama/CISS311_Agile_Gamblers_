@@ -85,7 +85,7 @@
             button4.Name = "button4";
             button4.Size = new Size(129, 52);
             button4.TabIndex = 4;
-            button4.Text = "What Courses a Student ENrolled In";
+            button4.Text = "What Courses a Student Enrolled In";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
