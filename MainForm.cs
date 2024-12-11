@@ -47,7 +47,8 @@ namespace CISS311_Agile_Gamblers_
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            WhatCoursesStudentEnrolled whatCoursesStudentEnrolled = new WhatCoursesStudentEnrolled();   
+            whatCoursesStudentEnrolled.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
