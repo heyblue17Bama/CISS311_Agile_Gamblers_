@@ -1,0 +1,33 @@
+This script created 3 tables in a database called TinyCollegeDB
+
+course table
+courseId (auto generated PK)
+courseTitle (Title of course)
+semesterOffered (semester course if offered)
+
+
+student table
+studentId (auto generated PK)
+studentName 
+
+enrollment table  (this is to track classes to students)
+enrollmentId (auto generated PK)
+courseId (FK to the course table - courseId)
+studentId (FK to the student table - studentId)
+
+
+Here are my thoughts on how this should work
+
+when a student is added, we will update the student table
+when a course is added, we will update the course table
+
+Display all students will display (select * from dbo.student)
+
+Display all courses will display (select * from dbo.course)
+
+Enroll a student will select a student from the student table and select a course from the course table writing the results on button press to enrollment table (courseId, studentId)
+
+Who is in a course will select a course from drop-down, and display students where courseId = selected courseId from the enrollment table
+
+What course a student is enrolled in or has enrolled in will select a course from student selected and display all courses from the enrollment table
+
