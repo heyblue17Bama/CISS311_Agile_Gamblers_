@@ -52,19 +52,21 @@ namespace CISS311_Agile_Gamblers_
                 string query = "SELECT student.studentId, student.studentName, enrollment.courseId FROM student JOIN enrollment ON student.studentId=enrollment.studentId WHERE enrollment.courseId = " + courseIdTextBox.Text;
                 using SqlConnection conn1 = new(Properties.Settings.Default.connString);
                 {
-                    
+                    // set label to display course name
+                    DataRow dr = courseTable.Rows[0];
+                    courseTitleLabel.Text = dr["courseTitle"].ToString();
+                                            
+                    conn1.Open();
+                    SqlDataAdapter adapter1 = new SqlDataAdapter(query, conn1);
+                    DataTable dataTable = new();
 
-                        conn1.Open();
-                        SqlDataAdapter adapter1 = new SqlDataAdapter(query, conn1);
-                        DataTable dataTable = new();
-
-                        adapter1.Fill(dataTable);
-                        studentListBox.Items.Clear();
-                        foreach (DataRow row in dataTable.Rows)
-                        {
-                             string fillBox = "Student ID: " + row["studentId"].ToString() + " Student Name: " + row["studentName"].ToString();
-                             studentListBox.Items.Add(fillBox);
-                        }
+                    adapter1.Fill(dataTable);
+                    studentListBox.Items.Clear();
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                         string fillBox = "Student ID: " + row["studentId"].ToString() + " Student Name: " + row["studentName"].ToString();
+                         studentListBox.Items.Add(fillBox);
+                    }
                     
                 }
                 
