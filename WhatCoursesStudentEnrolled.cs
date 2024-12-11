@@ -21,6 +21,11 @@ namespace CISS311_Agile_Gamblers_
 {
     public partial class WhatCoursesStudentEnrolled : Form
     {
+
+        public WhatCoursesStudentEnrolled()
+        {
+            InitializeComponent();
+        }
         [Obsolete]
         private void WhatCoursesStudentEnrolled_Load(object sender, EventArgs e)
         {
