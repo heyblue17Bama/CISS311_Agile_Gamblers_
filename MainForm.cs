@@ -6,6 +6,8 @@ Advanced Agile Development
 // I noticed the buttons and getting the syntax lined up is the hardest part other than collaboration.
 
 
+using Project;
+
 namespace CISS311_Agile_Gamblers_
 {
     public partial class MainForm : Form
@@ -50,11 +52,13 @@ namespace CISS311_Agile_Gamblers_
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            AddCourse addcourse = new AddCourse();
+            addcourse.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            // open who is in a course
             WhosInACourse whosinacourse = new WhosInACourse();
             whosinacourse.ShowDialog();
         }
