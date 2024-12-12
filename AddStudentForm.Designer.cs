@@ -114,6 +114,7 @@
             Controls.Add(groupBox1);
             Name = "AddStudentForm";
             Text = "Add Student Form";
+            Load += AddStudentForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             statusStrip1.ResumeLayout(false);

@@ -46,5 +46,10 @@ namespace CISS311_Agile_Gamblers_
         {
 
         }
+
+        private void AddStudentForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
