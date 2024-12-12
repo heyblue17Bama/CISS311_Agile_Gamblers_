@@ -36,7 +36,8 @@ namespace CISS311_Agile_Gamblers_
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            AllStudentsForm allStudentsForm = new AllStudentsForm();
+            allStudentsForm.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -48,7 +49,7 @@ namespace CISS311_Agile_Gamblers_
 
         private void button4_Click(object sender, EventArgs e)
         {
-            WhatCoursesStudentEnrolled whatCoursesStudentEnrolled = new WhatCoursesStudentEnrolled();   
+            WhatCoursesStudentEnrolled whatCoursesStudentEnrolled = new WhatCoursesStudentEnrolled();
             whatCoursesStudentEnrolled.ShowDialog();
         }
 
@@ -63,6 +64,12 @@ namespace CISS311_Agile_Gamblers_
             // open who is in a course
             WhosInACourse whosinacourse = new WhosInACourse();
             whosinacourse.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddStudentForm addStudentform = new AddStudentForm();
+            addStudentform.ShowDialog();
         }
     }
 }
