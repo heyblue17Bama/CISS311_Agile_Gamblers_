@@ -50,13 +50,14 @@ namespace CISS311_Agile_Gamblers_
         private void studentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             using SqlConnection conn = new(Properties.Settings.Default.connString);
-            using (SqlCommand comd = new SqlCommand("SELECT coursesEnrolled FROM student " + "WHERE student.studentId = @studentId", conn))
+            //using (SqlCommand comd = new SqlCommand("SELECT coursesEnrolled FROM student " + "WHERE student.studentId = @studentId", conn))
+            using SqlCommand comd = new("SELECT course.courseTitle FROM enrollment JOIN course ON enrollment.courseId = course.courseID WHERE studentId = @studentId", conn);
             using (SqlDataAdapter adapter = new SqlDataAdapter(comd))
             {
                 comd.Parameters.AddWithValue("@studentId", studentComboBox.SelectedValue.ToString());
                 DataTable studentTable = new DataTable();
                 adapter.Fill(studentTable);
-                enrolledCoursesListBox.DisplayMember = "coursesEnrolled";
+                enrolledCoursesListBox.DisplayMember = "courseTitle";
                 enrolledCoursesListBox.ValueMember = "studentId";
                 enrolledCoursesListBox.DataSource = studentTable;
             }
