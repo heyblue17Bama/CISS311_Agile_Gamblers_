@@ -37,6 +37,9 @@
             // 
             studentGridView.AllowUserToAddRows = false;
             studentGridView.AllowUserToDeleteRows = false;
+            studentGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            studentGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            studentGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             studentGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             studentGridView.Location = new Point(202, 110);
             studentGridView.Name = "studentGridView";
