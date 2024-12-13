@@ -24,8 +24,8 @@ namespace CISS311_Agile_Gamblers_
 
         private void button6_Click(object sender, EventArgs e)
         {
-            DisplayAllCourses displayallcourses = new DisplayAllCourses();
-            displayallcourses.ShowDialog();
+            AllCourse allCourse = new AllCourse();
+            allCourse.ShowDialog();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -55,8 +55,8 @@ namespace CISS311_Agile_Gamblers_
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //AddCourse addcourse = new AddCourse();
-            //addcourse.ShowDialog();
+            AddCourse addcourse = new AddCourse();
+            addcourse.ShowDialog();
         }
 
         private void button7_Click(object sender, EventArgs e)
